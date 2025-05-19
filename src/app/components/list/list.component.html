@@ -1,7 +1,9 @@
-<div>
-  @for (cinguettio of firebaseServ.cinguettii(); track $index){
-    <div>
-      <span>{{cinguettio.text}} - {{cinguettio.creationTime.toDate()}}</span>
+<div class="list">
+  @for (cinguettio of firebaseServ.cinguettii(); track $index) {
+    <div class="card">
+      <span >{{cinguettio.text}}</span>
+      <span>{{cinguettio.creationTime.toDate()}}</span>
     </div>
   }
 </div>
+<app-form></app-form>

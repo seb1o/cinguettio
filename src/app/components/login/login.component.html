@@ -1,1 +1,10 @@
-<p>login works!</p>
+<form (submit)="login()">
+    <input  [(ngModel)]="email" type="email" name="email" id="email">
+    <input  [(ngModel)]="password" type="password" name="password" id="password">
+    @if (!authServ.isAuth()) {
+        <a [routerLink]= "['login']">login</a>
+    } else {
+        <button (click)="logout()">logout</button>
+    }
+    <button type="submit">accedi</button>
+</form>
